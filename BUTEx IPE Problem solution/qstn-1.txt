@@ -1,0 +1,33 @@
+#include<stdio.h>
+const int N=100;
+int VowelCnt(char str[]){
+    int cnt=0;
+    char ch;
+    for(int i=0;i<strlen(str);i++){
+            ch=str[i];
+            if(ch>='A'&&ch<='Z')ch=ch+32;
+           if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')cnt++;
+    }
+    return cnt;
+}
+
+int ConsonantCnt(char str[]){
+    int cnt=0;
+    char ch;
+    for(int i=0;i<strlen(str);i++){
+            ch=str[i];
+            if(ch>='A'&&ch<='Z')ch=ch+32;
+           if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')continue;
+           cnt++;
+    }
+    return cnt;
+
+}
+
+int main(){
+    char s[N];
+    scanf("%s",&s);
+    printf("Number of Vowel: %d\n",VowelCnt(s));
+    printf("Number of Consonant: %d",ConsonantCnt(s));
+
+}

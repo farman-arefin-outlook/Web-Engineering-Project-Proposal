@@ -1,0 +1,22 @@
+//4
+#include<stdio.h>
+const int N=5;
+struct student {
+    char name[20],address[30];
+    int id;
+};
+int main(){
+    struct student stu[N];
+    for(int i=0;i<N;i++){
+        printf("Enter Name: \n");scanf("%s",&stu[i].name);
+        printf("Student ID: \n");scanf("%d",&stu[i].id);
+        printf("Address: \n");scanf("%s",&stu[i].address);
+    }
+ printf("Name\t\t\tStudent ID\t\tAddress\n");
+        for(int i=0;i<N;i++){
+        printf("%s\t\t\t",stu[i].name);
+        printf(" %d\t\t\t",stu[i].id);
+        printf(" %s\n",stu[i].address);
+    }
+
+}
